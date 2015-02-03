@@ -10,7 +10,7 @@
                     <field name="tipos"/>
                     <field name="peso"/>
                     <field name="altura"/>
-                    <field name="habilidad"/>
+                    <field name="habilidades"/>
                     <field name="habilidad_oculta"/>
                     <field name="generacion"/>
                 </tree>
@@ -27,7 +27,7 @@
                             <field name="tipos"/>
                             <field name="peso"/>
                             <field name="altura"/>
-                            <field name="habilidad"/>
+                            <field name="habilidades"/>
                             <field name="habilidad_oculta"/>
                             <field name="generacion"/>
                         </group>
@@ -36,13 +36,12 @@
             </field>
         </record>
         <record model="ir.actions.act_window" id="action_open_view_pokemon_form">
-            <field name="name">Pokémon</field>
+            <field name="name">Pokemon</field>
             <field name="res_model">pokemon.pokemon</field>
             <field name="view_type">form</field>
             <field name="view_mode">tree,form</field>
         </record>
-        <menuitem name="Pokémon" id="menu_pokemon_form" action="action_open_view_pokemon_form"
-                  sequence="15"/>
+        <menuitem name="Pokémon" id="menu_pokemon_form" action="action_open_view_pokemon_form" sequence="15"/>
         <menuitem name="Pokémon" id="menu_pokemon" parent="menu_pokemon_form" sequence="2"/>
         <menuitem name="Universo Pokémon" id="listar_pokemon" parent="menu_pokemon"
                   action="action_open_view_pokemon_form" sequence="3"/>
