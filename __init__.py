@@ -1,1 +1,1 @@
-import pokemon
+# -*-coding:utf-8-*-
