@@ -8,6 +8,7 @@ class pokemon_tipos(Model):
     _rec_name = "nombre"
     _columns = {
         "nombre": fields.char("Nombre", size=30, required=True),
+        'pokemon_id': fields.many2one('pokemon.pokemon', 'Parent'),
     }
 
 
@@ -19,7 +20,8 @@ class pokemon_habilidades(Model):
     _rec_name = "nombre"
     _columns = {
         "nombre": fields.char("Nombre", size=50, required=True),
-        # "efecto": fields.text("Efecto"),
+        "efecto": fields.text("Efecto"),
+        'pokemon_id': fields.many2one('pokemon.pokemon', 'Parent'),
     }
 
 
@@ -31,13 +33,13 @@ class pokemon_pokemon(Model):
     _rec_name = "nombre"
     _columns = {
         "nombre": fields.char("Nombre", size=30, required=True),
-        "tipos": fields.one2many('pokemon.tipos', 'Tipos', required=True),
+        "tipos": fields.one2many('pokemon.tipos', 'pokemon_id', 'Tipos', required=True),
         "peso": fields.float("Peso", digits=(5, 2)),
         "altura": fields.float("Altura", digits=(4, 2)),
-        "habilidades": fields.one2many('pokemon.habilidades', "Habilidad", required=True),
+        "habilidades": fields.one2many('pokemon.habilidades', 'pokemon_id', "Habilidad", required=True),
         "habilidad_oculta": fields.many2one('pokemon.habilidades', "Habilidad oculta"),
         "generacion": fields.selection((('1', "Primera"), ('2', "Segunda"), ('3', "Tercera"), ('4', "Cuarta"),
-                                        ('5', "Quinta"), ('6', "Sexta")), required=True),
+                                        ('5', "Quinta"), ('6', "Sexta")), "Generación", required=True),
     }
 
 

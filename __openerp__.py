@@ -9,7 +9,7 @@
         "base",
     ],
     "data": [
-        "pokemon_view.xml"
+        "views/pokemon_view.xml"
     ],
     "active": False,
     "installable": True,
