@@ -10,7 +10,7 @@
                     <field name="tipos"/>
                     <field name="peso"/>
                     <field name="altura"/>
-                    <field name="habilidad"/>
+                    <field name="habilidades"/>
                     <field name="habilidad_oculta"/>
                     <field name="generacion"/>
                 </tree>
@@ -27,7 +27,7 @@
                             <field name="tipos"/>
                             <field name="peso"/>
                             <field name="altura"/>
-                            <field name="habilidad"/>
+                            <field name="habilidades"/>
                             <field name="habilidad_oculta"/>
                             <field name="generacion"/>
                         </group>

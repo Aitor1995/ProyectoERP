@@ -19,7 +19,7 @@ class pokemon_habilidades(Model):
     _rec_name = "nombre"
     _columns = {
         "nombre": fields.char("Nombre", size=50, required=True),
-        "efecto": fields.text("Efecto"),
+        # "efecto": fields.text("Efecto"),
     }
 
 
