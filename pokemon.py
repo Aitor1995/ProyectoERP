@@ -8,7 +8,6 @@ class pokemon_tipos(Model):
     _rec_name = "nombre"
     _columns = {
         "nombre": fields.char("Nombre", size=30, required=True),
-        'pokemon_id': fields.many2one('pokemon.pokemon', 'Parent'),
     }
 
 
@@ -33,7 +32,10 @@ class pokemon_pokemon(Model):
     _rec_name = "nombre"
     _columns = {
         "nombre": fields.char("Nombre", size=30, required=True),
-        "tipos": fields.one2many('pokemon.tipos', 'pokemon_id', 'Tipos', required=True),
+        "numero": fields.integer("Número"),
+        "tipo": fields.many2one('pokemon.tipos', 'Tipo', required=True),
+        'tiene_tipo_2': fields.boolean('¿Dos tipos?'),
+        "tipo2": fields.many2one('pokemon.tipos', 'Tipo 2'),
         "peso": fields.float("Peso", digits=(5, 2)),
         "altura": fields.float("Altura", digits=(4, 2)),
         "habilidades": fields.one2many('pokemon.habilidades', 'pokemon_id', "Habilidad", required=True),

@@ -7,7 +7,9 @@
             <field name="arch" type="xml">
                 <tree string="Universo Pokémon">
                     <field name="nombre"/>
-                    <field name="tipos"/>
+                    <field name="numero"/>
+                    <field name="tipo"/>
+                    <field name="tipo2"/>
                     <field name="peso"/>
                     <field name="altura"/>
                     <field name="habilidades"/>
@@ -24,7 +26,10 @@
                     <sheet>
                         <group>
                             <field name="nombre"/>
-                            <field name="tipos"/>
+                            <field name="numero"/>
+                            <field name="tipo"/>
+                            <field name="tiene_tipo_2"/>
+                            <field name="tipo2" attrs="{'invisible': [('tiene_tipo_2','!=', True)]}"/>
                             <field name="peso"/>
                             <field name="altura"/>
                             <field name="habilidades"/>
