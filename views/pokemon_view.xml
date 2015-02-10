@@ -46,14 +46,21 @@
                         </div>
                         <notebook>
                             <page string="Tipos">
+                                <label for="tipo" class="oe_edit_only"/>
                                 <field name="tipo"/>
+                                <label for="tiene_tipo_2" class="oe_edit_only"/>
                                 <field name="tiene_tipo_2"/>
+                                <label for="tipo2" class="oe_edit_only" attrs="{'invisible': [('tiene_tipo_2','!=', True)]}"/>
                                 <field name="tipo2" attrs="{'invisible': [('tiene_tipo_2','!=', True)]}"/>
                             </page>
                             <page string="Habilidades">
+                                <label for="habilidad" class="oe_edit_only"/>
                                 <field name="habilidad"/>
+                                <label for="tiene_habilidad_2" class="oe_edit_only"/>
                                 <field name="tiene_habilidad_2"/>
+                                <label for="habilidad2" class="oe_edit_only" attrs="{'invisible': [('tiene_habilidad_2','!=', True)]}"/>
                                 <field name="habilidad2" attrs="{'invisible': [('tiene_habilidad_2','!=', True)]}"/>
+                                <label for="habilidad_oculta" class="oe_edit_only"/>
                                 <field name="habilidad_oculta"/>
                             </page>
                             <page string="Características">
