@@ -25,21 +25,42 @@
             <field name="arch" type="xml">
                 <form string="Nuevo Pokémon" version="7.0">
                     <sheet>
-                        <group>
-                            <field name="numero"/>
-                            <field name="nombre"/>
-                            <field name="generacion"/>
-                            <field name="imagen" widget="image"/>
-                            <field name="tipo"/>
-                            <field name="tiene_tipo_2"/>
-                            <field name="tipo2" attrs="{'invisible': [('tiene_tipo_2','!=', True)]}"/>
-                            <field name="peso"/>
-                            <field name="altura"/>
-                            <field name="habilidad"/>
-                            <field name="tiene_habilidad_2"/>
-                            <field name="habilidad2" attrs="{'invisible': [('tiene_habilidad_2','!=', True)]}"/>
-                            <field name="habilidad_oculta"/>
-                        </group>
+                        <field name="imagen" widget="image" class="oe_avatar oe_left"/>
+                        <div class="oe_title">
+                            <div class="oe_edit_only">
+                                <label for="nombre" string="Nombre Pokémon"/>
+                            </div>
+                            <h1>
+                                <field name="nombre"/>
+                            </h1>
+                            <label for="numero" class="oe_edit_only"/>
+                            <h2>
+                                <field name="numero"/>
+                            </h2>
+                            <label for="generacion" class="oe_edit_only"/>
+                            <h3>
+                                <field name="generacion"/>
+                            </h3>
+                        </div>
+                        <div class="oe_right oe_button_box" name="buttons">
+                        </div>
+                        <notebook>
+                            <page string="Tipos">
+                                <field name="tipo"/>
+                                <field name="tiene_tipo_2"/>
+                                <field name="tipo2" attrs="{'invisible': [('tiene_tipo_2','!=', True)]}"/>
+                            </page>
+                            <page string="Habilidades">
+                                <field name="habilidad"/>
+                                <field name="tiene_habilidad_2"/>
+                                <field name="habilidad2" attrs="{'invisible': [('tiene_habilidad_2','!=', True)]}"/>
+                                <field name="habilidad_oculta"/>
+                            </page>
+                            <page string="Características">
+                                <field name="peso"/>
+                                <field name="altura"/>
+                            </page>
+                        </notebook>
                     </sheet>
                 </form>
             </field>
