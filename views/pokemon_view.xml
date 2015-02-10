@@ -97,10 +97,10 @@
                                     <div class="oe_clear"></div>
                                 </div>
                                 <div t-attf-class="oe_kanban_content">
-                                    name:
+                                    Nombre:
                                     <field name="nombre"/>
                                     <br/>
-                                    <!-- Other field here -->
+
                                 </div>
                             </div>
                         </t>
