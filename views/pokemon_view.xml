@@ -71,11 +71,48 @@
                 </form>
             </field>
         </record>
+        <record id="view_pokemon_form" model="ir.ui.view">
+            <field name="name">Pokémon Kanban</field>
+            <field name="model">pokemon.pokemon</field>
+            <field name="arch" type="xml">
+                <kanban>
+                    <field name="color"/>
+                    <templates>
+                        <t t-name="kanban-box">
+                            <div t-attf-class="oe_kanban_color_#{kanban_getcolor(record.color.raw_value)}
+                                oe_kanban_global_click_edit oe_semantic_html_override
+                                oe_kanban_card #{record.group_fancy==1 ? 'oe_kanban_card_fancy' : ''}">
+                                <div class="oe_dropdown_kanban">
+                                    <div class="oe_dropdown_toggle">
+                                        <span class="oe_e">#</span>
+                                        <ul class="oe_dropdown_menu">
+                                            <li>
+                                                <a type="delete">Delete</a>
+                                            </li>
+                                            <li>
+                                                <ul class="oe_kanban_colorpicker" data-field="color"/>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="oe_clear"></div>
+                                </div>
+                                <div t-attf-class="oe_kanban_content">
+                                    name:
+                                    <field name="name"/>
+                                    <br/>
+                                    <!-- Other field here -->
+                                </div>
+                            </div>
+                        </t>
+                    </templates>
+                </kanban>
+            </field>
+        </record>
         <record model="ir.actions.act_window" id="action_open_view_pokemon_form">
             <field name="name">Pokemon</field>
             <field name="res_model">pokemon.pokemon</field>
             <field name="view_type">form</field>
-            <field name="view_mode">tree,form</field>
+            <field name="view_mode">tree,form,kanban</field>
         </record>
         <menuitem name="Pokémon" id="menu_pokemon_form" action="action_open_view_pokemon_form" sequence="15"/>
         <menuitem name="Pokémon" id="menu_pokemon" parent="menu_pokemon_form" sequence="2"/>
