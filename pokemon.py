@@ -30,7 +30,7 @@ class pokemon_pokemon(Model):
     _name = "pokemon.pokemon"
     _rec_name = "nombre"
     _columns = {
-        "numero": fields.integer("Número"),
+        "numero": fields.integer("Número", required=True),
         "nombre": fields.char("Nombre", size=30, required=True),
         "generacion": fields.selection((('1', "Primera"), ('2', "Segunda"), ('3', "Tercera"), ('4', "Cuarta"),
                                         ('5', "Quinta"), ('6', "Sexta")), "Generación", required=True),
