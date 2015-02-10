@@ -98,7 +98,7 @@
                                 </div>
                                 <div t-attf-class="oe_kanban_content">
                                     name:
-                                    <field name="name"/>
+                                    <field name="nombre"/>
                                     <br/>
                                     <!-- Other field here -->
                                 </div>
