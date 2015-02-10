@@ -6,15 +6,16 @@
             <field name="model">pokemon.pokemon</field>
             <field name="arch" type="xml">
                 <tree string="Universo Pokémon">
-                    <field name="nombre"/>
                     <field name="numero"/>
+                    <field name="nombre"/>
+                    <field name="generacion"/>
                     <field name="tipo"/>
                     <field name="tipo2"/>
                     <field name="peso"/>
                     <field name="altura"/>
-                    <field name="habilidades"/>
+                    <field name="habilidad"/>
+                    <field name="habilidad2"/>
                     <field name="habilidad_oculta"/>
-                    <field name="generacion"/>
                 </tree>
             </field>
         </record>
@@ -25,16 +26,19 @@
                 <form string="Nuevo Pokémon" version="7.0">
                     <sheet>
                         <group>
-                            <field name="nombre"/>
                             <field name="numero"/>
+                            <field name="nombre"/>
+                            <field name="generacion"/>
+                            <field name="imagen" widget="image"/>
                             <field name="tipo"/>
                             <field name="tiene_tipo_2"/>
                             <field name="tipo2" attrs="{'invisible': [('tiene_tipo_2','!=', True)]}"/>
                             <field name="peso"/>
                             <field name="altura"/>
-                            <field name="habilidades"/>
+                            <field name="habilidad"/>
+                            <field name="tiene_habilidad_2"/>
+                            <field name="habilidad2" attrs="{'invisible': [('tiene_habilidad_2','!=', True)]}"/>
                             <field name="habilidad_oculta"/>
-                            <field name="generacion"/>
                         </group>
                     </sheet>
                 </form>

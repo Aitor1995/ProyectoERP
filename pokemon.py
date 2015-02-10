@@ -20,7 +20,6 @@ class pokemon_habilidades(Model):
     _columns = {
         "nombre": fields.char("Nombre", size=50, required=True),
         "efecto": fields.text("Efecto"),
-        'pokemon_id': fields.many2one('pokemon.pokemon', 'Parent'),
     }
 
 
@@ -31,17 +30,20 @@ class pokemon_pokemon(Model):
     _name = "pokemon.pokemon"
     _rec_name = "nombre"
     _columns = {
-        "nombre": fields.char("Nombre", size=30, required=True),
         "numero": fields.integer("Número"),
+        "nombre": fields.char("Nombre", size=30, required=True),
+        "generacion": fields.selection((('1', "Primera"), ('2', "Segunda"), ('3', "Tercera"), ('4', "Cuarta"),
+                                        ('5', "Quinta"), ('6', "Sexta")), "Generación", required=True),
+        "imagen": fields.binary('Imagen', help='Imágen del pokemon'),
         "tipo": fields.many2one('pokemon.tipos', 'Tipo', required=True),
         'tiene_tipo_2': fields.boolean('¿Dos tipos?'),
         "tipo2": fields.many2one('pokemon.tipos', 'Tipo 2'),
         "peso": fields.float("Peso", digits=(5, 2)),
         "altura": fields.float("Altura", digits=(4, 2)),
-        "habilidades": fields.one2many('pokemon.habilidades', 'pokemon_id', "Habilidad", required=True),
+        "habilidad": fields.many2one('pokemon.habilidades', 'Habilidad', required=True),
+        'tiene_habilidad_2': fields.boolean('¿Dos habilidades?'),
+        "habilidad2": fields.many2one('pokemon.habilidades', 'Habilidad 2'),
         "habilidad_oculta": fields.many2one('pokemon.habilidades', "Habilidad oculta"),
-        "generacion": fields.selection((('1', "Primera"), ('2', "Segunda"), ('3', "Tercera"), ('4', "Cuarta"),
-                                        ('5', "Quinta"), ('6', "Sexta")), "Generación", required=True),
     }
 
 
