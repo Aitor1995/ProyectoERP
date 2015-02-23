@@ -51,6 +51,7 @@ class pokemon_pokemon(Model):
         "ataque_especial_base": fields.integer("Ataque especial"),
         "defensa_especial_base": fields.integer("Defensa especial"),
         "velocidad_base": fields.integer("Velocidad"),
+        'color': fields.integer('Color Index'),
     }
 
 
