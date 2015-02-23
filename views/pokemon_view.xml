@@ -80,6 +80,20 @@
                     <field name="imagen"/>
                     <templates>
                         <t t-name="kanban-box">
+                            <div class="oe_dropdown_kanban">
+                                    <div class="oe_dropdown_toggle">
+                                        <span class="oe_e">#</span>
+                                        <ul class="oe_dropdown_menu">
+                                            <li>
+                                                <a type="delete">Borrar</a>
+                                            </li>
+                                            <li>
+                                                <ul class="oe_kanban_colorpicker" data-field="color"/>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="oe_clear"/>
+                                </div>
                             <div class="oe_product_vignette">
                                 <a type="open">
                                     <img t-att-src="kanban_image('pokemon.pokemon', 'imagen', record.id.value)"
