@@ -66,7 +66,7 @@
                                     <field name="defensa_base"/>
                                     <field name="ataque_especial_base"/>
                                     <field name="defensa_especial_base"/>
-                                    <field name="velocidad"/>
+                                    <field name="velocidad_base"/>
                                 </group>
                             </page>
                             <page string="Características">
