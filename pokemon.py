@@ -35,6 +35,7 @@ class pokemon_pokemon(Model):
         "generacion": fields.selection((('1', "Primera"), ('2', "Segunda"), ('3', "Tercera"), ('4', "Cuarta"),
                                         ('5', "Quinta"), ('6', "Sexta")), "Generación", required=True),
         "imagen": fields.binary('Imagen', help='Imágen del pokemon'),
+        "descripcion_pokedex": fields.text('Descripción Pokédex'),
         "tipo": fields.many2one('pokemon.tipos', 'Tipo', required=True),
         'tiene_tipo_2': fields.boolean('¿Dos tipos?'),
         "tipo2": fields.many2one('pokemon.tipos', 'Tipo 2'),
@@ -44,6 +45,12 @@ class pokemon_pokemon(Model):
         'tiene_habilidad_2': fields.boolean('¿Dos habilidades?'),
         "habilidad2": fields.many2one('pokemon.habilidades', 'Habilidad 2'),
         "habilidad_oculta": fields.many2one('pokemon.habilidades', "Habilidad oculta"),
+        "ps_base": fields.integer("PS"),
+        "ataque_base": fields.integer("Ataque"),
+        "defensa_base": fields.integer("Defensa"),
+        "ataque_especial_base": fields.integer("Ataque especial"),
+        "defensa_especial_base": fields.integer("Defensa especial"),
+        "velocidad_base": fields.integer("Velocidad"),
     }
 
 

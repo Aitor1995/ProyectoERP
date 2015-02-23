@@ -60,6 +60,15 @@
                                     <field name="habilidad_oculta"/>
                                 </group>
                             </page>
+                            <page string="Estadísticas base">
+                                <group>
+                                    <field name="ataque_base"/>
+                                    <field name="defensa_base"/>
+                                    <field name="ataque_especial_base"/>
+                                    <field name="defensa_especial_base"/>
+                                    <field name="velocidad"/>
+                                </group>
+                            </page>
                             <page string="Características">
                                 <group>
                                     <field name="peso"/>
