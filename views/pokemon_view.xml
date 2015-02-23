@@ -60,6 +60,14 @@
                                     <field name="habilidad_oculta"/>
                                 </group>
                             </page>
+                            <page string="Evoluciones">
+                                <group>
+                                    <field name="tiene_preevolucion"/>
+                                    <field name="preevolucion" attrs="{'invisible': [('tiene_preevolucion','!=', True)]}"/>
+                                    <field name="tiene_evolucion"/>
+                                    <field name="evolucion"  attrs="{'invisible': [('tiene_evolucion','!=', True)]}"/>
+                                </group>
+                            </page>
                             <page string="Estadísticas base">
                                 <group>
                                     <field name="ataque_base"/>

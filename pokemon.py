@@ -51,6 +51,10 @@ class pokemon_pokemon(Model):
         "ataque_especial_base": fields.integer("Ataque especial"),
         "defensa_especial_base": fields.integer("Defensa especial"),
         "velocidad_base": fields.integer("Velocidad"),
+        "tiene_preevolucion": fields.boolean("¿Preevolución?"),
+        "preevolucion": fields.many2one('pokemon.pokemon', "Preevolución"),
+        "tiene_evolucion": fields.boolean("¿Evoluciona?"),
+        "evolucion": fields.many2one('pokemon.pokemon', "Evolución"),
     }
 
 
