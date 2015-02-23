@@ -87,7 +87,6 @@
                 <kanban>
                     <field name="nombre"/>
                     <field name="imagen"/>
-                    <field name="color"/>
                     <templates>
                         <t t-name="kanban-box">
                             <div t-attf-class="oe_kanban_card oe_kanban_project oe_kanban_global_click">
