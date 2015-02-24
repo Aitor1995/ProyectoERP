@@ -5,55 +5,55 @@
             <field name="nombre">Acero</field>
         </record>
         <record id="pokemon_tipo_agua" model="pokemon.tipos">
-            <field name="nombre">Acero</field>
+            <field name="nombre">Agua</field>
         </record>
         <record id="pokemon_tipo_bicho" model="pokemon.tipos">
-            <field name="nombre">Acero</field>
+            <field name="nombre">Bicho</field>
         </record>
         <record id="pokemon_tipo_dragon" model="pokemon.tipos">
-            <field name="nombre">Acero</field>
+            <field name="nombre">Dragón</field>
         </record>
         <record id="pokemon_tipo_electrico" model="pokemon.tipos">
-            <field name="nombre">Acero</field>
+            <field name="nombre">Eléctrico</field>
         </record>
         <record id="pokemon_tipo_fantasma" model="pokemon.tipos">
-            <field name="nombre">Acero</field>
+            <field name="nombre">Fantasma</field>
         </record>
         <record id="pokemon_tipo_fuego" model="pokemon.tipos">
-            <field name="nombre">Acero</field>
+            <field name="nombre">Fuego</field>
         </record>
         <record id="pokemon_tipo_hada" model="pokemon.tipos">
-            <field name="nombre">Acero</field>
+            <field name="nombre">Hada</field>
         </record>
         <record id="pokemon_tipo_hielo" model="pokemon.tipos">
-            <field name="nombre">Acero</field>
+            <field name="nombre">Hielo</field>
         </record>
         <record id="pokemon_tipo_lucha" model="pokemon.tipos">
-            <field name="nombre">Acero</field>
+            <field name="nombre">Lucha</field>
         </record>
         <record id="pokemon_tipo_normal" model="pokemon.tipos">
-            <field name="nombre">Acero</field>
+            <field name="nombre">Normal</field>
         </record>
         <record id="pokemon_tipo_planta" model="pokemon.tipos">
-            <field name="nombre">Acero</field>
+            <field name="nombre">Planta</field>
         </record>
         <record id="pokemon_tipo_psiquico" model="pokemon.tipos">
-            <field name="nombre">Acero</field>
+            <field name="nombre">Psíquico</field>
         </record>
         <record id="pokemon_tipo_roca" model="pokemon.tipos">
-            <field name="nombre">Acero</field>
+            <field name="nombre">Roca</field>
         </record>
         <record id="pokemon_tipo_siniestro" model="pokemon.tipos">
-            <field name="nombre">Acero</field>
+            <field name="nombre">Siniestro</field>
         </record>
         <record id="pokemon_tipo_tierra" model="pokemon.tipos">
-            <field name="nombre">Acero</field>
+            <field name="nombre">Tierra</field>
         </record>
         <record id="pokemon_tipo_veneno" model="pokemon.tipos">
-            <field name="nombre">Acero</field>
+            <field name="nombre">Veneno</field>
         </record>
         <record id="pokemon_tipo_volador" model="pokemon.tipos">
-            <field name="nombre">Acero</field>
+            <field name="nombre">Volador</field>
         </record>
     </data>
 </openerp>
