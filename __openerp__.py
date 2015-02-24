@@ -12,7 +12,9 @@
         "views/pokemon_view.xml",
     ],
     "demo": [
-        "demo/pokemon_demo.xml"
+        "demo/pokemon_tipos_demo.xml",
+        "demo/pokemon_habilidades_demo.xml",
+        "demo/pokemon_demo.xml",
     ],
     "active": False,
     "installable": True,
