@@ -14,7 +14,7 @@
             <field name="tipo" ref="pokemon_tipo_planta"/>
             <field name="tiene_tipo_2">true</field>
             <field name="tipo2" ref="pokemon_tipo_veneno"/>
-            <field name="peso">6,9</field>
+            <field name="peso">6.9</field>
             <field name="altura">0.9</field>
             <field name="habilidad" ref="pokemon_habilidad_1"/>
             <field name="tiene_habilidad_2">false</field>
