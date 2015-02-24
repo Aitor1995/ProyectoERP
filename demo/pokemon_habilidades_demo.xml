@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data noupdate="1">
+        <record id="pokemon_habilidad_1" model="pokemon.habilidades">
+            <field name="nombre">Espesura</field>
+            <field name="efecto">Aumenta el poder de los ataques de tipo planta un 50%, es decir, multiplica su poder por 1.5, siempre y cuando esté igual o por debajo de un tercio (33%) de sus PS.</field>
+        </record>
+        <record id="pokemon_habilidad_2" model="pokemon.habilidades">
+            <field name="nombre">Clorofila</field>
+            <field name="efecto">Sube la velocidad 2 niveles cuando hay sol (después de usar día soleado o tras la habilidad sequía).</field>
+        </record>
+    </data>
+</openerp>

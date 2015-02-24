@@ -45,6 +45,11 @@
                         <div class="oe_right oe_button_box" name="buttons">
                         </div>
                         <notebook>
+                            <page string="Descripción">
+                                <group>
+                                    <field name="descripcion_pokedex"/>
+                                </group>
+                            </page>
                             <page string="Tipos">
                                 <group>
                                     <field name="tipo"/>
