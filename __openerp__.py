@@ -11,6 +11,9 @@
     "data": [
         "views/pokemon_view.xml",
     ],
+    "demo": [
+        "demo/pokemon_demo.xml"
+    ],
     "active": False,
     "installable": True,
 }
